@@ -1,3 +1,9 @@
+## Mise à jour 0.2 — performances et vitrage
+
+Le rendu extérieur utilise des fenêtres opaques et réfléchissantes pour occulter l’habitacle incomplet. Les fichiers sources GLB et gzip ne sont pas modifiés. Au chargement, Meshoptimizer prépare des indices LOD des roues avec erreur relative bornée à 0,004, normales et UV pondérés, et frontières protégées ; les attributs originaux restent inchangés. Le rendu complet reste disponible en Élevée. Le feuillage éloigné réutilise un quart ou la moitié des cartes originales. Les colliders et la simulation à 120 Hz restent indépendants de ces choix.
+
+La qualité Automatique est désormais proposée par défaut. Elle plafonne les pixels à 1,28 million, puis adapte progressivement la résolution après plusieurs fenêtres lentes. Économe plafonne à 720 000 pixels ; Élevée à 2,0736 millions. Automatique et Économe désactivent les ombres dynamiques ; Élevée utilise une carte de 1024², plafonnée à 20 mises à jour par seconde. Une ombre de contact légère reste visible. Les quatre lumières inutiles de la maquette ont été désactivées. Voir `docs/PERFORMANCE.md` pour les mesures ; les sections suivantes décrivent la recherche et le socle initial 0.1, que ces changements de rendu remplacent lorsqu’ils diffèrent.
+
 # drive2forget — Décisions techniques
 
 Recherche réalisée le **13 novembre 2026**. Les liens ci-dessous ont été effectivement consultés par HTTP dans cet environnement. Ce document distingue les possibilités des bibliothèques, les choix de conception et les résultats qui devront être mesurés dans le projet. Il ne constitue pas un benchmark GPU.

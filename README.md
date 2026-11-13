@@ -2,7 +2,7 @@
 
 Une expérience de conduite libre en forêt, pour navigateur PC. Aucun classement, adversaire ou objectif imposé.
 
-**Version 0.1 : prototype physique jouable / alpha.** La BMW M5 Competition « The Midnight Spectre » fournie par l'utilisateur est intégrée, avec ses roues d'origine animées par les suspensions. Le modèle et ses roues ont été inspectés visuellement ; la végétation et l'audio restent provisoires. Le rendu photoréaliste final n'est pas validé. L'état détaillé des critères figure dans [docs/STATUS.md](docs/STATUS.md).
+**Version 0.2 : prototype physique jouable / alpha.** La BMW M5 Competition « The Midnight Spectre » fournie par l'utilisateur est intégrée, avec ses roues d'origine animées par les suspensions. Le modèle et ses roues ont été inspectés visuellement ; la végétation et l'audio restent provisoires. Le rendu photoréaliste final n'est pas validé. L'état détaillé des critères figure dans [docs/STATUS.md](docs/STATUS.md).
 
 ## Installer et lancer
 
@@ -42,7 +42,7 @@ Les tests Playwright démarrent Vite si nécessaire. La configuration utilise `/
 
 AZERTY et QWERTY fonctionnent sans changement de configuration. Une prise en charge initiale des manettes au mapping standard est présente : stick gauche, gâchettes droite/gauche, bouton principal pour le frein à main et Start pour la pause. Elle nécessite une validation sur du matériel réel.
 
-Le menu pause propose le volume, la réduction des effets lumineux et la qualité. **Légère** réduit immédiatement la résolution et désactive les ombres ; recharger la page applique aussi la densité réduite de végétation. Le choix est conservé localement. Une perte de focus efface les commandes ; masquer l'onglet met le jeu en pause.
+Le menu pause propose le volume, la réduction des effets lumineux et la qualité. **Automatique** est le nouveau réglage par défaut : budget de pixels plafonné, adaptation de résolution si les images restent lentes, roues et feuillage lointain en LOD, sans ombres dynamiques. **Économe** réduit davantage la résolution et la distance végétale. **Élevée** conserve les roues d'origine et active des ombres 1024 px, recalculées au plus à 20 Hz. Les réglages de rendu s'appliquent immédiatement ; ils ne reconstruisent pas les colliders. La densité initiale des arbres reste celle du chargement afin de préserver le monde existant. Le choix est conservé localement. Une perte de focus efface les commandes ; masquer l'onglet met le jeu en pause.
 
 ## Ce qui est implémenté
 
@@ -66,7 +66,7 @@ Le modèle chargé au démarrage est **« Bmw M5 Competition ( The Midnight Spec
 
 Le modèle peut être partagé avec attribution **à des fins non commerciales**. Le §2(a)(4) de la licence autorise les changements techniques de format nécessaires ; il n'autorise pas le partage d'adaptations artistiques ou de géométrie. La conversion conserve la géométrie, les normales et les paramètres de matériaux d'origine : conversion d'unités et d'UV, regroupement technique des canaux de textures et déduplication exacte, **sans décimation ni recoloration**. Les roues et jantes étaient déjà séparées ; leurs meshes sont animés à l'exécution sans découpe de topologie. Les opérations et empreintes sont consignées dans [CONVERSION_MANIFEST.json](public/assets/cars/CONVERSION_MANIFEST.json). Aucune affiliation ou approbation BMW/Echoo n'est revendiquée.
 
-`VehicleVisual.loadLicensedModel()` charge réellement `public/assets/cars/model.json` et ses deux parties gzip : **13 001 607 octets**, décompressés en un GLB de **16 443 596 octets**, contenant **56 meshes, 917 348 triangles, 33 matériaux et 11 textures**. La décompression utilise `DecompressionStream` dans un navigateur récent. Ce poids géométrique est conservé pour respecter le contenu fourni ; son coût, les matériaux et le raccordement visuel des roues restent à vérifier sur GPU réel. Aucune optimisation de topologie ou LOD du modèle n'est revendiquée.
+`VehicleVisual.loadLicensedModel()` charge réellement `public/assets/cars/model.json` et ses deux parties gzip : **13 001 607 octets**, décompressés en un GLB de **16 443 596 octets**, contenant **56 meshes, 917 348 triangles, 33 matériaux et 11 textures**. La décompression utilise `DecompressionStream` dans un navigateur récent. Ce poids géométrique est conservé pour respecter le contenu fourni ; son coût, les matériaux et le raccordement visuel des roues restent à vérifier sur GPU réel. Le fichier source conserve sa topologie ; les indices LOD sont calculés uniquement pour le rendu au chargement.
 
 ## Production et GitHub Pages
 
@@ -76,10 +76,16 @@ Dans le dépôt, choisir **Settings → Pages → Build and deployment → Sourc
 
 ## Validation et limites
 
-Les 15 tests numériques couvrent notamment le repos, l'accélération et le freinage, la marche arrière, les contacts indépendants, les raccords, le déterminisme, la destruction des colliders et un parcours de **plus de 3 km avec deux déplacements d'origine**. Ils ne remplacent pas une session de conduite humaine. Le build de production et TypeScript passent. Les deux scénarios Playwright passent ; captures 1920×1080 / 2560×1440 en mode léger, avec commandes vérifiées en 640×360. Le build démarre sous `/drive2forget/` sans erreur HTTP ou JavaScript (30 réponses). Les résultats navigateur et des captures sont consignés dans [docs/STATUS.md](docs/STATUS.md).
+Les 19 tests numériques couvrent notamment le repos, l'accélération et le freinage, la marche arrière, les contacts indépendants, les raccords, le déterminisme, la destruction des colliders et un parcours de **plus de 3 km avec deux déplacements d'origine**. Ils ne remplacent pas une session de conduite humaine. Le build de production et TypeScript passent. Les scénarios Playwright vérifient le démarrage et la conduite ainsi que les vitres opaques et le changement de qualité en direct ; captures 1920×1080 / 2560×1440 en mode léger, avec commandes vérifiées en 640×360. Le build démarre sous `/drive2forget/` sans erreur HTTP ou JavaScript (30 réponses). Les résultats navigateur et des captures sont consignés dans [docs/STATUS.md](docs/STATUS.md).
 
-Restent notamment : validation sur GPU réel de la BMW et de ses roues, arbres et sons de production, compression KTX2/Basis, LOD/imposteurs, génération par worker, calibration des pneus et suspensions et validation prolongée sur GPU réel. Les métriques F3 indiquent FPS, temps par frame, temps physique, chunks, draw calls, triangles et objets graphiques ; elles ne mesurent pas la VRAM réelle. **Aucun objectif de 60 FPS en 1080p sur GPU dédié n'est annoncé comme atteint.**
+Restent notamment : validation sur GPU réel de la BMW et de ses roues, arbres et sons de production, compression KTX2/Basis, imposteurs et LOD supplémentaires, génération par worker, calibration des pneus et suspensions et validation prolongée sur GPU réel. Les métriques F3 indiquent FPS, temps par frame, temps physique, chunks, draw calls, triangles et objets graphiques ; elles ne mesurent pas la VRAM réelle. **Aucun objectif de 60 FPS en 1080p sur GPU dédié n'est annoncé comme atteint.**
 
 ## Licences
 
 Aucune licence de redistribution du **code original** n'a encore été choisie. Les licences de Three.js, Rapier et des autres dépendances continuent de s'appliquer à leurs propres fichiers ; elles ne placent pas automatiquement ce projet sous la même licence. Les assets Poly Haven restent CC0 ; la BMW est CC BY-NC-ND 4.0. La distribution du jeu avec ce modèle doit rester non commerciale et conserver les attributions ; cette condition ne donne pas automatiquement une licence de redistribution au code original. Les références étudiées ne constituent pas une autorisation de réutiliser du code sans licence.
+
+## Correction des performances et du vitrage (0.2)
+
+Les fichiers du modèle restent identiques. Le moteur prépare des indices de rendu allégés pour les roues avec Meshoptimizer et conserve leurs positions, normales, UV et la version complète. La BMW affiche 331 668 triangles en Automatique/Économe au lieu de 917 348. Les vitres extérieures sont rendues opaques et réfléchissantes pour masquer un habitacle incomplet. Quatre éclairages inutiles de la maquette ont été désactivés ; une ombre de contact légère ancre la voiture au sol. Le rendu GPU est suspendu dans le menu pause après sa première image.
+
+Voir [docs/PERFORMANCE.md](docs/PERFORMANCE.md) pour les mesures et leurs limites. Le workflow Pages se lance désormais automatiquement sur une modification du code de `main`.

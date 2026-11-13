@@ -33,3 +33,9 @@ Les textures d'asphalte, de sol forestier et d'écorce ainsi que le HDRI Poly Ha
 Aucun code des projets de référence n'a été copié dans ce dépôt. Les trois autres modèles Sketchfab du brief (F90 et E60 de Res1n, M5 optimisée d'asset_garden) ne sont pas inclus ; leurs licences ont seulement été étudiées.
 
 La berline de secours, les végétaux procéduraux, les textures de feuillage générées et les sons synthétiques sont des ressources de développement originales créées pour ce projet. **Aucune licence de redistribution du code original n'est choisie dans cette version.** Les licences des dépendances, des textures et du modèle de voiture restent distinctes.
+
+### Rendu 0.2
+
+Les fichiers du modèle distribué et leurs empreintes restent inchangés. Les indices LOD des roues et le rendu opaque des vitres sont calculés au chargement pour l’affichage extérieur du jeu ; les normales, positions et UV de la source sont conservées. Ces réglages de représentation ne constituent pas une nouvelle archive de modèle exportée.
+
+Meshoptimizer 1.0.1 : MIT, copyright © 2016–2025 Arseny Kapoulkine. Le texte de licence est conservé dans `docs/licenses/meshoptimizer.txt`.

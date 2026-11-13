@@ -59,7 +59,7 @@ export class WorldManager {
   private readonly markingMaterial = new MeshStandardMaterial({ color: '#e9e5cd', roughness: .93 });
 
   constructor(private readonly scene: Scene, private readonly physics: RAPIER.World,
-    assets: WorldAssets, readonly seed = 42, readonly quality = 'high') {
+    assets: WorldAssets, readonly seed = 42, public quality = 'high') {
     this.road = new RoadGenerator(seed);
     this.terrain = new TerrainGenerator(this.road);
     this.vegetation = new VegetationSystem(seed, quality, assets.bark);
@@ -136,6 +136,18 @@ export class WorldManager {
     }
     const missing = wanted.find(index => !this.chunks.has(index));
     if (missing !== undefined) this.generate(missing);
+  }
+  setQuality(quality:string){this.quality=quality;}
+  /** Rendering distance and leaf LOD never remove the supporting terrain/colliders. */
+  updateVisibility(globalZ:number,distance:number){
+    for(const chunk of this.chunks.values()){
+      const start=chunk.index*this.chunkSize;
+      const near=Math.max(0,start-globalZ,globalZ-(start+this.chunkSize));
+      const vegetation=chunk.group.getObjectByName('vegetation');if(!vegetation)continue;
+      vegetation.visible=near<distance;
+      const level=this.quality==='high'?0:near>144?2:near>48?1:0;
+      vegetation.traverse(o=>{if(o instanceof Mesh&&o.userData.crowns)o.geometry=o.userData.crowns[level];});
+    }
   }
   rebase(deltaZ: number) {
     this.originZ += deltaZ;

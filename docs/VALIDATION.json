@@ -3,14 +3,14 @@
   "typescript": "passed",
   "productionBuild": "passed",
   "numericTests": {
-    "passed": 15,
-    "files": 4,
+    "passed": 19,
+    "files": 5,
     "physicalDriveMeters": 3100,
     "originRebases": 2,
     "unsupportedSteps": 0
   },
   "browserTests": {
-    "passed": 2,
+    "passed": 3,
     "renderer": "Chromium / ANGLE SwiftShader software",
     "quality": "low",
     "captures": [
@@ -26,6 +26,11 @@
     "controlsViewport": [
       640,
       360
+    ],
+    "additionalChecks": [
+      "opaque exterior windows",
+      "runtime wheel LOD",
+      "live quality changes preserve paused pose"
     ]
   },
   "productionSmoke": {
@@ -36,5 +41,6 @@
     "javascriptErrors": 0
   },
   "hardwareGpuBenchmark": false,
-  "publicPagesDeployment": false
+  "publicPagesDeployment": false,
+  "version": "0.2.0"
 }

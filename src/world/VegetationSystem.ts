@@ -119,6 +119,11 @@ function grassGeometry() {
 export class VegetationSystem {
   readonly trees = [treeGeometry(0), treeGeometry(1), treeGeometry(2)];
   readonly leafTexture = foliageTexture();
+  readonly distantCrowns=this.trees.map(tree=>[2,4].map(step=>{
+    const geometry=new BufferGeometry();for(const [name,attribute] of Object.entries(tree.crown.attributes))geometry.setAttribute(name,attribute);
+    const original=tree.crown.index!;const indices:number[]=[];for(let i=0;i<original.count;i+=6*step)for(let j=0;j<6;j++)indices.push(original.array[i+j]);
+    geometry.setIndex(indices);geometry.computeBoundingSphere();return geometry;
+  }));
   readonly generatedBark: Texture | undefined;
   readonly barkMaterial: MeshStandardMaterial;
   readonly birchMaterial: MeshStandardMaterial;
@@ -129,7 +134,7 @@ export class VegetationSystem {
   readonly grass = grassGeometry();
   readonly stone = new IcosahedronGeometry(1, 1);
   readonly bush: BufferGeometry;
-  constructor(readonly seed: number, readonly quality: string, bark?: Texture) {
+  constructor(readonly seed: number, public quality: string, bark?: Texture) {
     this.generatedBark = bark ? undefined : barkTexture();
     this.barkMaterial = new MeshStandardMaterial({ map: bark ?? this.generatedBark, roughness: 1 });
     this.birchMaterial = new MeshStandardMaterial({ map: bark ?? this.generatedBark, color: '#e1dfcd', roughness: 1 });
@@ -165,6 +170,7 @@ export class VegetationSystem {
       for (const part of ['trunk', 'crown'] as const) {
         const mesh = new InstancedMesh(this.trees[j][part], part === 'trunk' ? j === 1 ? this.birchMaterial : this.barkMaterial : this.leafMaterial, instances.length);
         mesh.name = `tree-${j}-${part}`;
+        if(part==='crown')mesh.userData.crowns=[this.trees[j].crown,...this.distantCrowns[j]];
         for (let i = 0; i < instances.length; i++) {
           mesh.setMatrixAt(i, instances[i].matrix);
           if (part === 'crown') mesh.setColorAt(i, instances[i].color);
@@ -196,6 +202,7 @@ export class VegetationSystem {
   }
   dispose() {
     for (const tree of this.trees) { tree.trunk.dispose(); tree.crown.dispose(); }
+    this.distantCrowns.flat().forEach(g=>g.dispose());
     this.bush.dispose(); this.grass.dispose(); this.stone.dispose();
     this.leafTexture.dispose(); this.generatedBark?.dispose();
     this.barkMaterial.dispose(); this.birchMaterial.dispose(); this.leafMaterial.dispose();

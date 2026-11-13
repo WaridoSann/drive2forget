@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import {wheelLOD,exteriorGlass} from './VehicleRendering';
 
 /** Original development sedan. This mesh is deliberately not identified as a BMW. */
 export class VehicleVisual {
@@ -14,6 +15,11 @@ export class VehicleVisual {
   private readonly licensedBrakeMaterials:THREE.MeshStandardMaterial[]=[];
   private readonly licensedWheelPivots:THREE.Group[]=[];
   private readonly licensedWheelSpins:THREE.Group[]=[];
+  private readonly wheelVariants=new Map<THREE.Mesh,{original:THREE.BufferGeometry;compact:THREE.BufferGeometry}>();
+  private quality='auto';
+  private contactShadow:THREE.Mesh|null=null;
+  get renderingStats(){let triangles=0;let glassOpaque=true;this.licensedModel?.traverse(o=>{if(o instanceof THREE.Mesh){triangles+=(o.geometry.index?.count??o.geometry.getAttribute('position').count)/3;for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.name==='TEX_017'||m.name==='TEX_014')glassOpaque&&=!m.transparent&&m.opacity===1;}});return {triangles,glassOpaque};}
+  setQuality(quality:string){this.quality=quality;for(const [mesh,g] of this.wheelVariants)mesh.geometry=quality==='high'?g.original:g.compact;}
   get hasLicensedModel():boolean {return this.licensedModel!==null;}
   private readonly paint = new THREE.MeshPhysicalMaterial({color:0x151e26,metalness:.85,roughness:.24,clearcoat:1,clearcoatRoughness:.16});
   private readonly glass = new THREE.MeshPhysicalMaterial({color:0x17242a,metalness:.27,roughness:.12,clearcoat:1,transparent:true,opacity:.89,side:THREE.DoubleSide});
@@ -201,6 +207,7 @@ export class VehicleVisual {
       pivot.position.copy(wheel.localPosition);pivot.position.y-=wheel.suspensionLength??(.43-wheel.compression);
       pivot.rotation.y=wheel.steering;spins[i].rotation.x=wheel.rotation;
     });
+    if(this.contactShadow&&wheels.length)this.contactShadow.position.y=wheels.reduce((sum,w)=>sum+w.localPosition.y-(w.suspensionLength??(.43-w.compression))-.33,0)/wheels.length;
     this.brakeMaterial.emissiveIntensity=brake?5:1.2;
     for(const material of this.licensedBrakeMaterials)material.emissiveIntensity=brake?3:1;
     for(const light of this.brakeLights)light.intensity=brake?1.4:.12;
@@ -269,10 +276,33 @@ export class VehicleVisual {
         }
       }
     });
-    this.licensedModel=container;this.shell.visible=false;
+    // The model's window material was almost transparent, exposing an incomplete
+    // cabin. Use opaque reflective exterior glazing at render time only.
+    const glasses=new Map<THREE.Material,THREE.Material>();
+    container.traverse(o=>{if(o instanceof THREE.Mesh){
+      const fix=(m:THREE.Material)=>{if(m instanceof THREE.MeshStandardMaterial&&(m.name==='TEX_017'||m.name==='TEX_014')){if(!glasses.has(m))glasses.set(m,exteriorGlass(m));return glasses.get(m)!;}return m;};
+      o.material=Array.isArray(o.material)?o.material.map(fix):fix(o.material);
+    }});
+    const cache=new Map<THREE.BufferGeometry,THREE.BufferGeometry>();
+    for(const wheel of mapping)for(const name of wheel.rotating){
+      const mesh=container.getObjectByName(name) as THREE.Mesh;
+      const original=mesh.geometry;
+      if(!cache.has(original))cache.set(original,await wheelLOD(original,.15));
+      this.wheelVariants.set(mesh,{original,compact:cache.get(original)!});
+      mesh.castShadow=false;
+    }
+    // Daytime driving doesn't need the four lights left by the development car.
+    this.group.traverse(o=>{if(o instanceof THREE.Light){o.visible=false;}});
+    this.licensedModel=container;this.setQuality(this.quality);this.shell.visible=false;
     for(const pivot of this.wheelPivots)pivot.visible=false;
     this.group.name='BMW M5 Competition — Echoo (CC BY-NC-ND 4.0)';
     this.group.add(container);
+    const canvas=document.createElement('canvas');canvas.width=96;canvas.height=192;
+    const ctx=canvas.getContext('2d')!;ctx.scale(1,2);const gradient=ctx.createRadialGradient(48,48,4,48,48,48);
+    gradient.addColorStop(0,'rgba(0,0,0,.38)');gradient.addColorStop(.5,'rgba(0,0,0,.25)');gradient.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,96,96);
+    const texture=new THREE.CanvasTexture(canvas);
+    this.contactShadow=new THREE.Mesh(new THREE.PlaneGeometry(2.5,5.2),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1}));
+    this.contactShadow.rotation.x=-Math.PI/2;this.contactShadow.position.y=-.75;this.group.add(this.contactShadow);
   }
 
   dispose():void {
@@ -281,6 +311,7 @@ export class VehicleVisual {
     this.group.traverse(o=>{if(o instanceof THREE.Mesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])materials.add(m);}});
     const textures=new Set<THREE.Texture>();
     for(const material of materials)for(const value of Object.values(material))if(value instanceof THREE.Texture)textures.add(value);
+    for(const g of this.wheelVariants.values()){geometries.add(g.original);geometries.add(g.compact);}
     geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());
   }
 }

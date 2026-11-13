@@ -1,0 +1,26 @@
+{
+  "viewport": [
+    960,
+    540
+  ],
+  "quality": "low",
+  "sourceModelFilesChanged": false,
+  "before": {
+    "triangles": 1232056,
+    "drawCalls": 154,
+    "colliders": 133,
+    "chunks": 9
+  },
+  "after": {
+    "triangles": 482822,
+    "drawCalls": 119,
+    "colliders": 133,
+    "chunks": 9,
+    "carRendering": {
+      "triangles": 331668,
+      "glassOpaque": true
+    }
+  },
+  "hardwareGpuBenchmark": false,
+  "timingNote": "The first post-change timing run overlapped browser tests; timings are excluded from the comparison."
+}
