@@ -1,0 +1,157 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 9,
+  "createdAt": "2025-11-05T19:31:46.741496",
+  "embedUrl": "https://sketchfab.com/models/2831975e80604b58b88237e8c5174a93/embed",
+  "faceCount": 917348,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/34b725081a6a4184957efaec2cb84ed3",
+    "label": "CC Attribution-NonCommercial-NoDerivs",
+    "fullName": "CC Attribution-NonCommercial-NoDerivs",
+    "requirements": "Author must be credited. No commercial use. Modified versions can not be distributed.",
+    "url": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "slug": "by-nc-nd"
+  },
+  "likeCount": 101,
+  "name": "Bmw M5 Competition ( The Midnight Spectre )",
+  "publishedAt": "2025-11-05T20:00:28.857984",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "bmw",
+      "slug": "bmw",
+      "uri": "https://api.sketchfab.com/v3/tags/bmw"
+    },
+    {
+      "name": "competition",
+      "slug": "competition",
+      "uri": "https://api.sketchfab.com/v3/tags/competition"
+    },
+    {
+      "name": "bmw-m5",
+      "slug": "bmw-m5",
+      "uri": "https://api.sketchfab.com/v3/tags/bmw-m5"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "eea65f54db094e7180fca5e24ac85d82",
+        "width": 1920,
+        "height": 1080,
+        "size": 401686,
+        "url": "https://media.sketchfab.com/models/2831975e80604b58b88237e8c5174a93/thumbnails/9b2e24c21fd341db853142cd52bec8cb/1e81941ef18f4ae584d29043eba385a8.jpeg"
+      },
+      {
+        "uid": "71305c4dde944147aa2f85fcabe6e265",
+        "width": 1024,
+        "height": 576,
+        "size": 44249,
+        "url": "https://media.sketchfab.com/models/2831975e80604b58b88237e8c5174a93/thumbnails/9b2e24c21fd341db853142cd52bec8cb/d4aedf568de54cc0a57ca246344e63f5.jpeg"
+      },
+      {
+        "uid": "ec530699c5664d978d61a14350e0cde2",
+        "width": 720,
+        "height": 405,
+        "size": 25614,
+        "url": "https://media.sketchfab.com/models/2831975e80604b58b88237e8c5174a93/thumbnails/9b2e24c21fd341db853142cd52bec8cb/a010797df4d94784ad31e864f22ec5bf.jpeg"
+      },
+      {
+        "uid": "b02a16afd3d24c28b4650f14e929c279",
+        "width": 256,
+        "height": 144,
+        "size": 5571,
+        "url": "https://media.sketchfab.com/models/2831975e80604b58b88237e8c5174a93/thumbnails/9b2e24c21fd341db853142cd52bec8cb/7ea90563aa284887a5ade29275e1c5a7.jpeg"
+      },
+      {
+        "uid": "db1dbef1254e4ddb88687f6c9de0afc2",
+        "width": 64,
+        "height": 36,
+        "size": 1271,
+        "url": "https://media.sketchfab.com/models/2831975e80604b58b88237e8c5174a93/thumbnails/9b2e24c21fd341db853142cd52bec8cb/565b2a99e475489988d97c4ba004c33e.jpeg"
+      }
+    ]
+  },
+  "uid": "2831975e80604b58b88237e8c5174a93",
+  "uri": "https://api.sketchfab.com/v3/models/2831975e80604b58b88237e8c5174a93",
+  "user": {
+    "uid": "82a55c722a32447787f70949276c9950",
+    "username": "echoo.",
+    "displayName": "Echoo",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/echoo.",
+    "avatar": {
+      "uid": "573231e0fe374253bc9a969a0acdaabc",
+      "uri": "https://api.sketchfab.com/v3/avatars/573231e0fe374253bc9a969a0acdaabc",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1936,
+          "url": "https://media.sketchfab.com/avatars/573231e0fe374253bc9a969a0acdaabc/fa408f11d02d48758ec277a9920e2cd6.png"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 3882,
+          "url": "https://media.sketchfab.com/avatars/573231e0fe374253bc9a969a0acdaabc/98adefb778b3482c8937d211ffd14bfe.png"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 11481,
+          "url": "https://media.sketchfab.com/avatars/573231e0fe374253bc9a969a0acdaabc/5552026a1d8e4707b333a15fe1f35409.png"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 13746,
+          "url": "https://media.sketchfab.com/avatars/573231e0fe374253bc9a969a0acdaabc/d35532e4bf15464184ba568c8e08197c.png"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/82a55c722a32447787f70949276c9950"
+  },
+  "vertexCount": 475666,
+  "viewCount": 11173,
+  "viewerUrl": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "As you are looking at a modified Bmw M5 **The Midnight Spectre**\n\nThe first model! This is the beginning of **Echoo**\n\n*Some more crazy variants of the BMW M5 will come soon, this is just the beginning*\n\n\n\nCredits : @thelightning",
+  "price": null,
+  "downloadCount": 2795,
+  "editorUrl": "https://sketchfab.com/models/2831975e80604b58b88237e8c5174a93/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2025-11-10T15:04:47.882622",
+  "pbrType": "metalness",
+  "textureCount": 15,
+  "materialCount": 39
+}

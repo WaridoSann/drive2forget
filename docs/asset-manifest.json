@@ -1,0 +1,208 @@
+[
+  {
+    "file": "environments/forest_slope_1k.hdr",
+    "asset": "forest_slope",
+    "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/forest_slope_1k.hdr",
+    "landingPage": "https://polyhaven.com/a/forest_slope",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 1911073,
+    "resolution": [
+      1024,
+      512
+    ],
+    "sha256": "926a6bb81897919b2924f42407162b8d54be91eab2da3fe7fe19daf308cfa09a"
+  },
+  {
+    "file": "textures/asphalt_02_diff_2k.jpg",
+    "asset": "asphalt_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 3075676,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+  },
+  {
+    "file": "textures/asphalt_02_nor_gl_2k.jpg",
+    "asset": "asphalt_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 4943950,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21"
+  },
+  {
+    "file": "textures/asphalt_02_rough_2k.jpg",
+    "asset": "asphalt_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_rough_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 2230457,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "b9a516b61b7040a9245ac206642d5f767ad9589a0169c4a1668221429e8a998c"
+  },
+  {
+    "file": "textures/bark_brown_02_diff_1k.jpg",
+    "asset": "bark_brown_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_diff_1k.jpg",
+    "landingPage": "https://polyhaven.com/a/bark_brown_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 659592,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "sha256": "920fa0bed0c9d78c1d530e99795113afd532d7db746de440f4a85d7c83ed0f1a"
+  },
+  {
+    "file": "textures/bark_brown_02_nor_gl_1k.jpg",
+    "asset": "bark_brown_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_nor_gl_1k.jpg",
+    "landingPage": "https://polyhaven.com/a/bark_brown_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 1015623,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "sha256": "0d5e691e8ad8bcd093a3587887fda2a6b4a948b5708a4f256f7919584c6eb857"
+  },
+  {
+    "file": "textures/bark_brown_02_rough_1k.jpg",
+    "asset": "bark_brown_02",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_rough_1k.jpg",
+    "landingPage": "https://polyhaven.com/a/bark_brown_02",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 337946,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "sha256": "68125592de36e15bae7aa6db85c4d135aeb7e5653199ba226483a70f6d69837d"
+  },
+  {
+    "file": "textures/forest_ground_04_diff_2k.jpg",
+    "asset": "forest_ground_04",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_diff_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/forest_ground_04",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 4529321,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "24b8aaf4c8547305d80b0e029ec365219ab1b90748d4ca5651bdc9e75bfde5e6"
+  },
+  {
+    "file": "textures/forest_ground_04_nor_gl_2k.jpg",
+    "asset": "forest_ground_04",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_nor_gl_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/forest_ground_04",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 5288849,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "b37ac799ed410976541e0011c246fca254e74eaa3f096ae7a7d74178db5a6d9b"
+  },
+  {
+    "file": "textures/forest_ground_04_rough_2k.jpg",
+    "asset": "forest_ground_04",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_rough_2k.jpg",
+    "landingPage": "https://polyhaven.com/a/forest_ground_04",
+    "license": "CC0-1.0",
+    "licenseSource": "https://raw.githubusercontent.com/Poly-Haven/polyhaven.com/master/public/locales/en/license.json",
+    "bytes": 2509805,
+    "resolution": [
+      2048,
+      2048
+    ],
+    "sha256": "24194662948424c323c75e0918461ad9d38bc0a275022000144f248b3efb4119"
+  },
+  {
+    "file": "cars/model.json",
+    "asset": "Bmw M5 Competition ( The Midnight Spectre )",
+    "author": "Echoo (echoo.)",
+    "additionalCredit": "@thelightning",
+    "source": "User-supplied Bmw_M5_Competition__The_Midnight_Spectre.usdz",
+    "landingPage": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93",
+    "license": "CC-BY-NC-ND-4.0",
+    "licenseSource": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "attributionFile": "cars/ATTRIBUTION.md",
+    "licenseFile": "cars/LICENSE-CC-BY-NC-ND-4.0.txt",
+    "bytes": 300,
+    "sha256": "ca8390cf892984672657df5cc9ff108b8f7b0b22b51371adb162d7c557ebf0d6",
+    "decodedBytes": 16443596,
+    "decodedSha256": "0cd05b49b8320ec3437c26a56644897683b1c5007571035c29d048f0a3d8743b",
+    "sourceSha256": "99eeade5f88047cd1b0ac26bc336ce79d7cfd341c8a192d3b017ad52ec97863d",
+    "meshes": 56,
+    "triangles": 917348,
+    "vertexEntries": 602519,
+    "materials": 33,
+    "embeddedImages": 11,
+    "conversionManifest": "cars/CONVERSION_MANIFEST.json",
+    "operations": "Original geometry, normals, PBR values and mesh transforms preserved. Unit conversion node; texture UV origin conversion; metallic/roughness channel packing; exact-byte deduplication; no decimation, recoloring, wheel separation or creative material edits.",
+    "usage": "Noncommercial only. Content-preserving technical format conversion under section 2(a)(4); no shared artistic adaptation.",
+    "combinedGzipBytes": 13001607,
+    "combinedGzipSha256": "285696191404155d293fe681deb2c86c6aeb3482b2064248b5606f45c88ba8e6",
+    "parts": [
+      {
+        "file": "cars/m5-f90.glb.gz.001",
+        "bytes": 7000000,
+        "sha256": "2fe619a71b83fa158269da61adebdc51d41ce9ca076d8b349bb563b066950ad6"
+      },
+      {
+        "file": "cars/m5-f90.glb.gz.002",
+        "bytes": 6001607,
+        "sha256": "96bfdbfaeced017444200840f94195bd0654542a8ddbcfbecfb37139ddc58cff"
+      }
+    ],
+    "transport": "Two static binary parts concatenated in manifest order before lossless gzip decompression; model bytes unchanged."
+  },
+  {
+    "file": "cars/m5-f90.glb.gz.001",
+    "bytes": 7000000,
+    "sha256": "2fe619a71b83fa158269da61adebdc51d41ce9ca076d8b349bb563b066950ad6",
+    "asset": "Bmw M5 Competition ( The Midnight Spectre ) transport part",
+    "parentManifest": "cars/model.json",
+    "role": "gzip-transport-part",
+    "author": "Echoo (echoo.)",
+    "additionalCredit": "@thelightning",
+    "landingPage": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93",
+    "license": "CC-BY-NC-ND-4.0",
+    "licenseSource": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  },
+  {
+    "file": "cars/m5-f90.glb.gz.002",
+    "bytes": 6001607,
+    "sha256": "96bfdbfaeced017444200840f94195bd0654542a8ddbcfbecfb37139ddc58cff",
+    "asset": "Bmw M5 Competition ( The Midnight Spectre ) transport part",
+    "parentManifest": "cars/model.json",
+    "role": "gzip-transport-part",
+    "author": "Echoo (echoo.)",
+    "additionalCredit": "@thelightning",
+    "landingPage": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93",
+    "license": "CC-BY-NC-ND-4.0",
+    "licenseSource": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  }
+]

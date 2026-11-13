@@ -1,0 +1,357 @@
+{
+  "source": "Bmw_M5_Competition__The_Midnight_Spectre.usdz",
+  "sourceSha256": "99eeade5f88047cd1b0ac26bc336ce79d7cfd341c8a192d3b017ad52ec97863d",
+  "glbSha256": "0cd05b49b8320ec3437c26a56644897683b1c5007571035c29d048f0a3d8743b",
+  "glbBytes": 16443596,
+  "gzipBytes": 13001607,
+  "vertices": 602519,
+  "triangles": 917348,
+  "meshes": [
+    {
+      "node": "Object_0",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_007_4/root_003_3/GLTF_SceneRootNode_003_2/BMW_008_9_003_1/Object_22_002_0/Object_8/Object_0",
+      "vertices": 29023,
+      "triangles": 38996
+    },
+    {
+      "node": "Object_1",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_005_13/root_001_12/GLTF_SceneRootNode_001_11/BMW_008_9_001_10/Object_22_001_9/Object_14/Object_1",
+      "vertices": 5775,
+      "triangles": 9471
+    },
+    {
+      "node": "Object_2",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_004_23/USDRoot_001_22/scene_001_21/Meshes_001_20/Sketchfab_model_003_19/_e7d93b943224cbc9cc88b06ab9d34ed_fbx_001_18/RootNode_001_17/f_bmw_f90_m5_023_001_16/f_bmw_f90_m5_023_bmwlogo_0_003_15/f_bmw_f90_m5_023_bmwlogo_0_002_14/Object_25/Object_2",
+      "vertices": 134,
+      "triangles": 96
+    },
+    {
+      "node": "Object_3",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_001_29_26/Object_90_24/Object_31/Object_3",
+      "vertices": 187,
+      "triangles": 146
+    },
+    {
+      "node": "Object_4",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_001_29_26/Object_91_25/Object_33/Object_4",
+      "vertices": 5,
+      "triangles": 2
+    },
+    {
+      "node": "Object_5",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_002_31_29/Object_108_27/Object_36/Object_5",
+      "vertices": 187,
+      "triangles": 146
+    },
+    {
+      "node": "Object_6",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_002_31_29/Object_109_28/Object_38/Object_6",
+      "vertices": 6,
+      "triangles": 2
+    },
+    {
+      "node": "Object_7",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_003_33_32/Object_126_30/Object_41/Object_7",
+      "vertices": 185,
+      "triangles": 146
+    },
+    {
+      "node": "Object_8",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_003_33_32/Object_127_31/Object_43/Object_8",
+      "vertices": 5,
+      "triangles": 2
+    },
+    {
+      "node": "Object_9",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_004_27_35/Object_72_33/Object_46/Object_9",
+      "vertices": 187,
+      "triangles": 146
+    },
+    {
+      "node": "Object_10",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_004_27_35/Object_73_34/Object_48/Object_10",
+      "vertices": 5,
+      "triangles": 2
+    },
+    {
+      "node": "Object_11",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_005_34_37/Object_129_36/Object_51/Object_11",
+      "vertices": 1209,
+      "triangles": 2112
+    },
+    {
+      "node": "Object_12",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_006_12_39/Object_29_38/Object_54/Object_12",
+      "vertices": 1419,
+      "triangles": 2178
+    },
+    {
+      "node": "Object_13",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_007_5_41/Object_14_40/Object_57/Object_13",
+      "vertices": 5145,
+      "triangles": 5448
+    },
+    {
+      "node": "Object_14",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_008_9_43/Object_23_42/Object_60/Object_14",
+      "vertices": 1895,
+      "triangles": 2540
+    },
+    {
+      "node": "Object_15",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_010_10_46/Object_25_45/Object_63/Object_15",
+      "vertices": 2104,
+      "triangles": 3888
+    },
+    {
+      "node": "Object_16",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_011_14_48/Object_33_47/Object_66/Object_16",
+      "vertices": 1525,
+      "triangles": 2774
+    },
+    {
+      "node": "Object_17",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_012_6_50/Object_16_49/Object_69/Object_17",
+      "vertices": 2230,
+      "triangles": 3602
+    },
+    {
+      "node": "Object_18",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_013_15_52/Object_35_51/Object_72/Object_18",
+      "vertices": 3103,
+      "triangles": 4820
+    },
+    {
+      "node": "Object_19",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_014_7_54/Object_18_53/Object_75/Object_19",
+      "vertices": 5673,
+      "triangles": 7259
+    },
+    {
+      "node": "Object_20",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_015_16_56/Object_37_55/Object_78/Object_20",
+      "vertices": 9241,
+      "triangles": 8990
+    },
+    {
+      "node": "Object_21",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_016_17_58/Object_39_57/Object_81/Object_21",
+      "vertices": 454,
+      "triangles": 434
+    },
+    {
+      "node": "Object_22",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_017_4_60/Object_12_59/Object_84/Object_22",
+      "vertices": 4567,
+      "triangles": 6104
+    },
+    {
+      "node": "Object_23",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_018_8_62/Object_20_61/Object_87/Object_23",
+      "vertices": 88,
+      "triangles": 55
+    },
+    {
+      "node": "Object_24",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_019_3_64/Object_10_63/Object_90/Object_24",
+      "vertices": 4215,
+      "triangles": 7852
+    },
+    {
+      "node": "Object_25",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_020_1_66/Object_6_65/Object_93/Object_25",
+      "vertices": 3033,
+      "triangles": 5526
+    },
+    {
+      "node": "Object_26",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_021_0_68/Object_4_67/Object_96/Object_26",
+      "vertices": 288,
+      "triangles": 480
+    },
+    {
+      "node": "Object_27",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_022_2_70/Object_8_69/Object_99/Object_27",
+      "vertices": 283,
+      "triangles": 444
+    },
+    {
+      "node": "Object_28",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_023_28_72/Object_87_71/Object_102/Object_28",
+      "vertices": 64,
+      "triangles": 124
+    },
+    {
+      "node": "Object_29",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_024_30_74/Object_105_73/Object_105/Object_29",
+      "vertices": 64,
+      "triangles": 124
+    },
+    {
+      "node": "Object_30",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_025_26_76/Object_69_75/Object_108/Object_30",
+      "vertices": 64,
+      "triangles": 124
+    },
+    {
+      "node": "Object_31",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_026_32_78/Object_123_77/Object_111/Object_31",
+      "vertices": 64,
+      "triangles": 124
+    },
+    {
+      "node": "Object_32",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_027_11_80/Object_27_79/Object_114/Object_32",
+      "vertices": 19769,
+      "triangles": 17517
+    },
+    {
+      "node": "Object_33",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_030_20_84/Object_45_83/Object_117/Object_33",
+      "vertices": 1535,
+      "triangles": 2179
+    },
+    {
+      "node": "Object_34",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_031_21_86/Object_47_85/Object_120/Object_34",
+      "vertices": 2793,
+      "triangles": 3215
+    },
+    {
+      "node": "Object_35",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_032_22_88/Object_49_87/Object_123/Object_35",
+      "vertices": 111,
+      "triangles": 62
+    },
+    {
+      "node": "Object_36",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_033_23_90/Object_51_89/Object_126/Object_36",
+      "vertices": 20461,
+      "triangles": 30001
+    },
+    {
+      "node": "Object_37",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_034_24_92/Object_53_91/Object_129/Object_37",
+      "vertices": 2457,
+      "triangles": 3495
+    },
+    {
+      "node": "Object_38",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_002_97/root_96/GLTF_SceneRootNode_95/BMW_035_25_94/Object_55_93/Object_132/Object_38",
+      "vertices": 20254,
+      "triangles": 31794
+    },
+    {
+      "node": "Object_39",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/f_bmw_f90_m5_126_M_CarPaint_Trim_CarbonA_Max_0_001_98/Object_134/Object_39",
+      "vertices": 4532,
+      "triangles": 2126
+    },
+    {
+      "node": "Object_40",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/f_bmw_f90_m5_125_diffuser_0_001_99/Object_136/Object_40",
+      "vertices": 7204,
+      "triangles": 6140
+    },
+    {
+      "node": "Object_41",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/f_bmw_f90_m5_023_bmwlogo_0_001_100/Object_138/Object_41",
+      "vertices": 144,
+      "triangles": 96
+    },
+    {
+      "node": "Object_42",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Body_002_105/Object_140/Object_42",
+      "vertices": 462,
+      "triangles": 743
+    },
+    {
+      "node": "Object_43",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Body_003_106/Object_142/Object_43",
+      "vertices": 458,
+      "triangles": 719
+    },
+    {
+      "node": "Object_44",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Tire_107/Object_144/Object_44",
+      "vertices": 21735,
+      "triangles": 37606
+    },
+    {
+      "node": "Object_45",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_108/Object_146/Object_45",
+      "vertices": 65532,
+      "triangles": 104015
+    },
+    {
+      "node": "Object_46",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_108/Object_147/Object_46",
+      "vertices": 22711,
+      "triangles": 34655
+    },
+    {
+      "node": "Object_47",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Tire_002_109/Object_149/Object_47",
+      "vertices": 21735,
+      "triangles": 37606
+    },
+    {
+      "node": "Object_48",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_002_110/Object_151/Object_48",
+      "vertices": 65532,
+      "triangles": 104015
+    },
+    {
+      "node": "Object_49",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_002_110/Object_152/Object_49",
+      "vertices": 22711,
+      "triangles": 34655
+    },
+    {
+      "node": "Object_50",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Tire_003_111/Object_154/Object_50",
+      "vertices": 21735,
+      "triangles": 37606
+    },
+    {
+      "node": "Object_51",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_003_112/Object_156/Object_51",
+      "vertices": 65532,
+      "triangles": 104015
+    },
+    {
+      "node": "Object_52",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_003_112/Object_157/Object_52",
+      "vertices": 22711,
+      "triangles": 34655
+    },
+    {
+      "node": "Object_53",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Tire_004_113/Object_159/Object_53",
+      "vertices": 21735,
+      "triangles": 37606
+    },
+    {
+      "node": "Object_54",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_004_114/Object_161/Object_54",
+      "vertices": 65532,
+      "triangles": 104015
+    },
+    {
+      "node": "Object_55",
+      "sourcePath": "/scene/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/esr_cs1_gloss_black_004_114/Object_162/Object_55",
+      "vertices": 22711,
+      "triangles": 34655
+    }
+  ],
+  "metadata": {
+    "author": "Echoo (https://sketchfab.com/echoo.)",
+    "copyright": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+    "generator": "Sketchfab-16.82.0",
+    "title": "Bmw M5 Competition ( The Midnight Spectre )",
+    "url": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93"
+  },
+  "conversion": "Original geometry, normals, PBR values and mesh transforms preserved. Unit conversion node; texture UV origin conversion; metallic/roughness channel packing; exact-byte deduplication; no decimation, recoloring, wheel separation or creative material edits.",
+  "materials": 33,
+  "textures": 11
+}

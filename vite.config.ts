@@ -1,0 +1,5 @@
+import { defineConfig } from 'vite';
+export default defineConfig({
+  base:'./',
+  build:{target:'es2022',chunkSizeWarningLimit:900,rollupOptions:{output:{manualChunks:(id:string)=>id.includes('@dimforge')?'physics':id.includes('/three/')?'three':undefined}}},
+});

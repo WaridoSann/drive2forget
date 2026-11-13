@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/browser',timeout:180000,workers:1,reporter:[['list'],['json',{outputFile:'test-results/results.json'}]],use:{baseURL:'http://127.0.0.1:5173',browserName:'chromium',viewport:{width:1920,height:1080},launchOptions:{executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']}},webServer:{command:'npm run dev -- --port 5173',url:'http://127.0.0.1:5173',reuseExistingServer:true,timeout:30000}});

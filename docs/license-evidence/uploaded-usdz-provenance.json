@@ -1,0 +1,58 @@
+{
+  "filename": "Bmw_M5_Competition__The_Midnight_Spectre.usdz",
+  "bytes": 13681029,
+  "sha256": "99eeade5f88047cd1b0ac26bc336ce79d7cfd341c8a192d3b017ad52ec97863d",
+  "sourceMatch": "embedded-usdc-author-license-title-and-model-uid",
+  "sourceModelUID": "2831975e80604b58b88237e8c5174a93",
+  "sourceLicense": "CC-BY-NC-ND-4.0",
+  "verifiedAt": "2026-11-13",
+  "notes": "Embedded USD scene metadata identifies author Echoo, CC BY-NC-ND 4.0, exact title and model UID. A content-preserving technical conversion is permitted by section 2(a)(4) for noncommercial distribution with attribution; artistic adaptations may not be shared under this license.",
+  "embeddedMetadataStrings": [
+    "Echoo (https://sketchfab.com/echoo.)",
+    "copyright",
+    "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+    "Sketchfab-16.82.0",
+    "Bmw M5 Competition ( The Midnight Spectre )",
+    "-2831975e80604b58b88237e8c5174a93"
+  ],
+  "includedConversion": {
+    "file": "cars/model.json",
+    "asset": "Bmw M5 Competition ( The Midnight Spectre )",
+    "author": "Echoo (echoo.)",
+    "additionalCredit": "@thelightning",
+    "source": "User-supplied Bmw_M5_Competition__The_Midnight_Spectre.usdz",
+    "landingPage": "https://sketchfab.com/3d-models/bmw-m5-competition-the-midnight-spectre-2831975e80604b58b88237e8c5174a93",
+    "license": "CC-BY-NC-ND-4.0",
+    "licenseSource": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "attributionFile": "cars/ATTRIBUTION.md",
+    "licenseFile": "cars/LICENSE-CC-BY-NC-ND-4.0.txt",
+    "bytes": 300,
+    "sha256": "ca8390cf892984672657df5cc9ff108b8f7b0b22b51371adb162d7c557ebf0d6",
+    "decodedBytes": 16443596,
+    "decodedSha256": "0cd05b49b8320ec3437c26a56644897683b1c5007571035c29d048f0a3d8743b",
+    "sourceSha256": "99eeade5f88047cd1b0ac26bc336ce79d7cfd341c8a192d3b017ad52ec97863d",
+    "meshes": 56,
+    "triangles": 917348,
+    "vertexEntries": 602519,
+    "materials": 33,
+    "embeddedImages": 11,
+    "conversionManifest": "cars/CONVERSION_MANIFEST.json",
+    "operations": "Original geometry, normals, PBR values and mesh transforms preserved. Unit conversion node; texture UV origin conversion; metallic/roughness channel packing; exact-byte deduplication; no decimation, recoloring, wheel separation or creative material edits.",
+    "usage": "Noncommercial only. Content-preserving technical format conversion under section 2(a)(4); no shared artistic adaptation.",
+    "combinedGzipBytes": 13001607,
+    "combinedGzipSha256": "285696191404155d293fe681deb2c86c6aeb3482b2064248b5606f45c88ba8e6",
+    "parts": [
+      {
+        "file": "cars/m5-f90.glb.gz.001",
+        "bytes": 7000000,
+        "sha256": "2fe619a71b83fa158269da61adebdc51d41ce9ca076d8b349bb563b066950ad6"
+      },
+      {
+        "file": "cars/m5-f90.glb.gz.002",
+        "bytes": 6001607,
+        "sha256": "96bfdbfaeced017444200840f94195bd0654542a8ddbcfbecfb37139ddc58cff"
+      }
+    ],
+    "transport": "Two static binary parts concatenated in manifest order before lossless gzip decompression; model bytes unchanged."
+  }
+}

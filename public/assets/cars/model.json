@@ -1,0 +1,10 @@
+{
+  "format": "drive2forget-gzip-parts-v1",
+  "parts": [
+    "m5-f90.glb.gz.001",
+    "m5-f90.glb.gz.002"
+  ],
+  "bytes": 13001607,
+  "sha256": "285696191404155d293fe681deb2c86c6aeb3482b2064248b5606f45c88ba8e6",
+  "decodedSha256": "0cd05b49b8320ec3437c26a56644897683b1c5007571035c29d048f0a3d8743b"
+}
