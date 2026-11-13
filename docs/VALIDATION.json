@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-13",
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "numericTests": {
+    "passed": 15,
+    "files": 4,
+    "physicalDriveMeters": 3100,
+    "originRebases": 2,
+    "unsupportedSteps": 0
+  },
+  "browserTests": {
+    "passed": 2,
+    "renderer": "Chromium / ANGLE SwiftShader software",
+    "quality": "low",
+    "captures": [
+      [
+        1920,
+        1080
+      ],
+      [
+        2560,
+        1440
+      ]
+    ],
+    "controlsViewport": [
+      640,
+      360
+    ]
+  },
+  "productionSmoke": {
+    "passed": true,
+    "path": "/drive2forget/",
+    "responses": 30,
+    "httpErrors": 0,
+    "javascriptErrors": 0
+  },
+  "hardwareGpuBenchmark": false,
+  "publicPagesDeployment": false
+}

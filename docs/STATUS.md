@@ -8,17 +8,19 @@
 - Parcours automatisé de **plus de 3 km**, avec **deux rebases** de l'origine, maintien du support physique et ressources bornées.
 - Vérification TypeScript et **build de production réussis**.
 - BMW : conversion USDZ → GLB effectuée, chargement local et raccordement aux quatre roues physiques implémentés. 56 meshes, 917 348 triangles, 33 matériaux et 11 textures ; aucune décimation.
-- Tests navigateur Playwright et captures 1920×1080 / 2560×1440 : **validation en cours**. Une tentative de capture avec ombres élevées sous rendu logiciel a dépassé le délai ; le mode léger est en cours de test. Ce dépassement ne permet pas de conclure aux performances sur GPU réel.
+- **2 scénarios Playwright réussis** : accueil, introduction, BMW chargée, immobilité, accélération clavier, pause/reprise Échap, reset, réduction des effets et passage de l’introduction. Captures 1920×1080 et 2560×1440 obtenues en mode léger ; commandes vérifiées ensuite en 640×360. Aucun échec HTTP ni erreur JavaScript dans le scénario principal.
+- **Build de production démarré sous `/drive2forget/`** : 30 réponses HTTP contrôlées, aucune réponse en erreur et aucune erreur JavaScript.
+- Une capture avec ombres élevées sous rendu logiciel avait dépassé le délai. La fluidité sur GPU réel reste à mesurer.
 - Aucune calibration sur GPU dédié ni validation d'un objectif de 60 FPS. La configuration Playwright actuelle utilise Chromium avec **SwiftShader logiciel**.
 
 ## Critères du brief
 
 | # | Critère | État et preuve disponible |
 |---|---|---|
-| 1 | Accueil noir et COMMENCER | Implémenté ; vérification navigateur finale en attente. |
+| 1 | Accueil noir et COMMENCER | Validé par Playwright. |
 | 2 | Phares, transition blanche fluide | Séquence lumineuse progressive implémentée, réduction des effets et bouton passer ; fluidité sur GPU cible à vérifier. |
 | 3 | BMW M5 crédible | Modèle BMW M5 Competition fourni intégré avec matériaux et géométrie conservés ; modèle inspecté visuellement ; coût sur GPU réel à mesurer. |
-| 4 | Départ immobile près de la forêt | Repos validé par test physique ; stationnement initial sur accotement implémenté. |
+| 4 | Départ immobile près de la forêt | Repos validé par les tests physiques et Playwright ; quatre contacts et vitesse nulle au départ. |
 | 5 | Quatre roues réagissant physiquement | Suspensions indépendantes et contact sur bosse testés ; roues et jantes d'origine du modèle raccordées à la suspension, au braquage et à la rotation. Contrôle visuel initial effectué. |
 | 6 | Transferts et mouvements de carrosserie | Forces appliquées au châssis et antiroulis implémentés ; comportement de production à calibrer. |
 | 7 | Caméra stable derrière le véhicule | Suivi amorti, interpolation et collision implémentés ; confort de conduite à valider humainement. |
@@ -29,13 +31,13 @@
 | 12 | Cohérence après demi-tour | Destruction puis reconstruction identique des segments et de la forêt testées ; demi-tour conduit à valider en navigateur. |
 | 13 | Physique sans comportement aberrant | Tests repos, pédales, direction, bosse et parcours long réussis ; cas extrêmes et réglage final encore ouverts. |
 | 14 | Performances stables dans la durée | Nombre de chunks et colliders borné et nettoyage testés ; profilage GPU/mémoire prolongé non réalisé. |
-| 15 | Build et chargement des assets | Build de production réussi, ressources locales incluses ; vérification complète des chargements en navigateur et après déploiement à compléter. |
+| 15 | Build et chargement des assets | Build et démarrage statique sous `/drive2forget/` validés sans erreur HTTP/JavaScript ; publication publique non activée. |
 
 « Implémenté » indique la présence d'un comportement fonctionnel dans le code ; cela ne signifie pas que tous les aspects visuels, matériels ou subjectifs du critère sont validés.
 
 ## Travail restant
 
-1. Terminer le contrôle visuel de la BMW fournie : matériaux, dimensions, contact au sol, alignement des roues et caméra. Le modèle est chargé via `VehicleVisual.loadLicensedModel()` depuis `assets/cars/model.json` et ses deux parties gzip (13 001 607 octets ; GLB décompressé de 16 443 596 octets). Vérifier son coût élevé en géométrie sans présenter une décimation ou des LOD comme déjà réalisés.
+1. Prolonger la validation sur GPU réel et en conduite humaine de la BMW fournie ; contrôle visuel initial effectué. Le modèle est chargé via `VehicleVisual.loadLicensedModel()` depuis `assets/cars/model.json` et ses deux parties gzip (13 001 607 octets ; GLB décompressé de 16 443 596 octets). Vérifier son coût élevé en géométrie sans présenter une décimation ou des LOD comme déjà réalisés.
 2. Remplacer ou améliorer la végétation de développement ; obtenir des sons enregistrés sous licences compatibles. La synthèse actuelle n'est pas un enregistrement automobile.
 3. Calibrer les suspensions, le couple et le modèle de pneus approximatif. Aucun modèle Pacejka complet ni validation par données mesurées.
 4. Mesurer les performances sur matériel disponible, tester longuement la conduite et profiler les ressources. KTX2/Basis, LOD/imposteurs et génération par worker restent non implémentés.

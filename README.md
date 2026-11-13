@@ -76,7 +76,7 @@ Dans le dépôt, choisir **Settings → Pages → Build and deployment → Sourc
 
 ## Validation et limites
 
-Les 15 tests numériques couvrent notamment le repos, l'accélération et le freinage, la marche arrière, les contacts indépendants, les raccords, le déterminisme, la destruction des colliders et un parcours de **plus de 3 km avec deux déplacements d'origine**. Ils ne remplacent pas une session de conduite humaine. Le build de production et TypeScript passent. Les résultats navigateur et des captures sont consignés dans [docs/STATUS.md](docs/STATUS.md).
+Les 15 tests numériques couvrent notamment le repos, l'accélération et le freinage, la marche arrière, les contacts indépendants, les raccords, le déterminisme, la destruction des colliders et un parcours de **plus de 3 km avec deux déplacements d'origine**. Ils ne remplacent pas une session de conduite humaine. Le build de production et TypeScript passent. Les deux scénarios Playwright passent ; captures 1920×1080 / 2560×1440 en mode léger, avec commandes vérifiées en 640×360. Le build démarre sous `/drive2forget/` sans erreur HTTP ou JavaScript (30 réponses). Les résultats navigateur et des captures sont consignés dans [docs/STATUS.md](docs/STATUS.md).
 
 Restent notamment : validation sur GPU réel de la BMW et de ses roues, arbres et sons de production, compression KTX2/Basis, LOD/imposteurs, génération par worker, calibration des pneus et suspensions et validation prolongée sur GPU réel. Les métriques F3 indiquent FPS, temps par frame, temps physique, chunks, draw calls, triangles et objets graphiques ; elles ne mesurent pas la VRAM réelle. **Aucun objectif de 60 FPS en 1080p sur GPU dédié n'est annoncé comme atteint.**
 
